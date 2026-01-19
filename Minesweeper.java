@@ -43,8 +43,9 @@ public class Minesweeper
             inps = input.split(",");
         
 
-            ;
+            
             x = Integer.parseInt(inps[1]);
+            y = Integer.parseInt(inps[0]);
         } while (!hasWon());
     }
 
@@ -118,8 +119,8 @@ public class Minesweeper
                         System.out.print(grid[r][c] + " ");
                     } else System.out.print(" M "); //priunt MINE :0
                 }
-                else if (dark) System.out.print("▓▓▓"); //◀
-                else System.out.print("▒▒▒");
+                else if (dark) System.out.print("[ ]"); //▓▓▓
+                else System.out.print("[ ]");//▒▒▒
                 dark = !dark;
             }
             System.out.println("▏"); //new line
