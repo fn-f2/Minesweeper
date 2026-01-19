@@ -37,6 +37,11 @@ public class Minesweeper
             System.out.print("\f");
             if (grid[y][x] == 0) floodClear(y, x);
             else if (grid[y][x] > 0) revealed[y][x] = true;
+            else
+            {
+                System.out.println("you lose muahahahahhaha");
+                break;
+            }
             printGrid();
 
             input = in.nextLine();
@@ -119,8 +124,8 @@ public class Minesweeper
                         System.out.print(grid[r][c] + " ");
                     } else System.out.print(" M "); //priunt MINE :0
                 }
-                else if (dark) System.out.print("[ ]"); //▓▓▓
-                else System.out.print("[ ]");//▒▒▒
+                else if (dark) System.out.print("▓▓▓"); //
+                else System.out.print("▒▒▒");//
                 dark = !dark;
             }
             System.out.println("▏"); //new line
